@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="/main.js" defer></script>
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="icon" href="/icons/key.png" />
+    <title>KEYnerator</title>
+  </head>
+  <body>
+    <header>
+      <div>
+        <h1>KEYnerator</h1>
+        <img src="/favicons/128x128.png" alt="KEYnerator" class="key" />
+      </div>
+      <p>Generate your custom randomized passwords in 5 clicks</p>
+    </header>
+    <main>
+      <form name="form" class="form1">
+        <fieldset class="letters">
+          <legend>Include letters</legend>
+          <ul>
+            <li>
+              <label for="lowercaseLetters">Lowercase</label>
+              <input
+                type="radio"
+                name="letters"
+                id="lowercaseLetters"
+                required
+              />
+            </li>
+            <li>
+              <label for="uppercaseLetters">Uppercase</label>
+              <input type="radio" name="letters" id="uppercaseLetters" />
+            </li>
+            <li>
+              <label for="bothLetters">Both</label>
+              <input type="radio" name="letters" id="bothLetters" />
+            </li>
+            <li>
+              <label for="noneLetters">None</label>
+              <input type="radio" name="letters" id="noneLetters" />
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="numbers">
+          <legend>Include numbers</legend>
+          <ul>
+            <li>
+              <label for="numbers">Numbers</label>
+              <input type="checkbox" id="numbers" />
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="characters">
+          <legend>Include special characters</legend>
+          <p>? ¿ @ # $ & ! * / +</p>
+          <ul>
+            <li>
+              <label for="characters">Characters</label>
+              <input type="checkbox" id="characters" />
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="length">
+          <legend>Password length</legend>
+          <p>Max length 20 characters</p>
+          <input type="range" min="5" max="20" required id="passLength" />
+          <div class="numberCharacters">
+            <p>Actual length: 13</p>
+          </div>
+        </fieldset>
+        <button class="generatePass">Generate password</button>
+      </form>
+      <form class="form2">
+        <input type="text" id="passGenerated" />
+        <button class="copyPass">
+          <img src="/icons/copy.svg" alt="copy" />
+        </button>
+      </form>
+    </main>
+    <footer>
+      <p>&copyKEYnerator</p>
+      <p>
+        All rights reserved to ososCoder
+        <a href="https://github.com/ososCoder" target="_blank"
+          ><img class="github" src="/icons/github-svg.svg" alt="github"
+        /></a>
+      </p>
+    </footer>
+  </body>
+</html>
